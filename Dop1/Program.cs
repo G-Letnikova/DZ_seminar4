@@ -1,20 +1,20 @@
 ﻿//________решение СУПЕРСДВИГа через функции_____________
  
-void StepLeft(int[] arr)
+void StepLeft(int[] arr)                      // сдвиг массива на шаг влево
 {
     int temp = arr[0];
     for (int i = 1; i < arr.Length; i++)
         arr[i - 1] = arr[i];
     arr[arr.Length - 1] = temp;
 }
-void StepRight(int[] arr)
+void StepRight(int[] arr)                    // сдвиг массива на шаг вправо
 {
     int temp = arr[arr.Length - 1];
     for (int i = arr.Length - 2; i >= 0; i--)
         arr[i + 1] = arr[i];
     arr[0] = temp;
 }
-void FillArray(int[] col, int lenghArr)
+void FillArray(int[] col, int lenghArr)     // заполнение массива с консоли
 {
     int index = 0;
     for (index=0; index<lenghArr; index++)
